@@ -2,13 +2,13 @@ package com.sims.soft.domain.board.application;
 
 import com.sims.soft.domain.board.domain.Board;
 import com.sims.soft.domain.board.domain.Likee;
-import com.sims.soft.domain.board.dto.Response.BoardResponse;
+import com.sims.soft.domain.board.dto.response.BoardResponse;
 import com.sims.soft.domain.board.persistance.BoardJpaRepository;
 import com.sims.soft.domain.board.persistance.BoardRepositorySupport;
 
 
 import com.sims.soft.domain.user.domain.User;
-import com.sims.soft.domain.board.dto.Request.BoardCommand;
+import com.sims.soft.domain.board.dto.request.BoardCommand;
 import com.sims.soft.domain.user.exception.UserMisMatchException;
 import com.sims.soft.domain.user.persistance.UserRepositorySupport;
 import com.sims.soft.domain.board.persistance.LikeeJpaRepository;
@@ -46,6 +46,7 @@ public class BoardCommandService {
         Board board = getBoardById(boardId);
         writerCheck(board, principal.getId());
         board.modify(boardCommand);
+
         return new BoardResponse(board,likeCheck(principal.getId(),boardId).isPresent());
     }
     private Optional<Likee> likeCheck(Long userId, Long boardId) {

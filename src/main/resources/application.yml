@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8070
   servlet:
     context-path: /api/sims
     encoding:
@@ -41,7 +41,7 @@ spring:
   datasource:
     url: jdbc:mariadb://localhost:3306/sims?characterEncoding=UTF-8&ServerTimezone=UTC
     username: root
-    password: austin
+    password: root
     driver-class-name: org.mariadb.jdbc.Driver
     hikari:
       maximum-pool-size: 1

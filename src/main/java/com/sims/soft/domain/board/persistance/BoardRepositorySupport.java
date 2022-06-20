@@ -1,13 +1,12 @@
 package com.sims.soft.domain.board.persistance;
 
 import com.querydsl.core.QueryResults;
-import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.sims.soft.domain.board.domain.Board;
 import com.sims.soft.domain.board.domain.Likee;
-import com.sims.soft.domain.board.dto.Response.BoardPageResponse;
+import com.sims.soft.domain.board.dto.response.BoardPageResponse;
 
 import com.sims.soft.domain.board.exception.BoardNotFoundException;
 import com.sims.soft.domain.user.domain.User;

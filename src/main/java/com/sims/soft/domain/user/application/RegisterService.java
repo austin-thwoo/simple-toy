@@ -46,7 +46,7 @@ public class RegisterService {
         return userJpaRepository.save(user);
 
     }
-
+//리드온리
     private void checkUserName(String username) {
         Optional<User> user = userJpaRepository.findByUserName(username);
         if (user.isPresent()) {

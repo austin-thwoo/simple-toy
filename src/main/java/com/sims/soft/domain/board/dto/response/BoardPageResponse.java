@@ -1,4 +1,4 @@
-package com.sims.soft.domain.board.dto.Response;
+package com.sims.soft.domain.board.dto.response;
 
 import com.sims.soft.domain.board.domain.Board;
 import lombok.Getter;
@@ -19,7 +19,7 @@ public class BoardPageResponse {
         this.id=board.getId();
         this.title=board.getTitle();
         this.writer= board.getWriter().getNickName();
-        this.likes= (long) board.getLikee().size();
+        this.likes= Long.valueOf(board.getLikee().size());
         this.createdAt=board.getCreatedDate();
         this.modifiedAt=board.getModifiedDate();
     }

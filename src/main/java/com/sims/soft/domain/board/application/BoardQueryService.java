@@ -2,8 +2,8 @@ package com.sims.soft.domain.board.application;
 
 import com.sims.soft.domain.board.domain.Board;
 import com.sims.soft.domain.board.domain.Likee;
-import com.sims.soft.domain.board.dto.Response.BoardPageResponse;
-import com.sims.soft.domain.board.dto.Response.BoardResponse;
+import com.sims.soft.domain.board.dto.response.BoardPageResponse;
+import com.sims.soft.domain.board.dto.response.BoardResponse;
 import com.sims.soft.domain.board.exception.BoardDeletedException;
 import com.sims.soft.domain.board.persistance.BoardJpaRepository;
 import com.sims.soft.domain.board.persistance.BoardRepositorySupport;

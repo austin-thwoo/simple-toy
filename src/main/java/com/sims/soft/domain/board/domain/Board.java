@@ -2,7 +2,7 @@ package com.sims.soft.domain.board.domain;
 
 
 import com.sims.soft.domain.user.domain.User;
-import com.sims.soft.domain.board.dto.Request.BoardCommand;
+import com.sims.soft.domain.board.dto.request.BoardCommand;
 import com.sims.soft.global.domain.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

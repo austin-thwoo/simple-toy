@@ -1,8 +1,7 @@
-package com.sims.soft.domain.board.dto.Response;
+package com.sims.soft.domain.board.dto.response;
 
 import com.sims.soft.domain.board.domain.Board;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 

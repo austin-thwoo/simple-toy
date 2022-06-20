@@ -1,9 +1,9 @@
 package com.sims.soft.domain.user.domain.common;
 
 public enum UserType {
-    CEED("관리자"),
-    SPROUT("제조사"),
-    TREE("중개인"),
+    SEED("씨앗"),
+    seedling("묘목"),
+    TREE("나무"),
     FOREST("숲");
 
     private final String value;

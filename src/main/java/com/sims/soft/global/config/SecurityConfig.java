@@ -66,7 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()//이거없으면 큰일남
                 .antMatchers("/auth/**", "/resource/*").permitAll()
                 .antMatchers("/user/**","/board/**").hasAnyRole("USER")
-                .antMatchers("/manage/examination/**","/manage").hasRole("ADMIN")
+                .antMatchers("/manage/board/**","/manage").hasRole("ADMIN")
 //                .antMatchers("/standard/**{Get}").hasRole("ADMIN")
                 .and()
                 .exceptionHandling()

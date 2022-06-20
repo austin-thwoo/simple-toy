@@ -1,11 +1,11 @@
 package com.sims.soft.domain.board.api;
 
 import com.sims.soft.domain.board.application.BoardQueryService;
-import com.sims.soft.domain.board.dto.Response.BoardPageResponse;
-import com.sims.soft.domain.board.dto.Response.BoardResponse;
+import com.sims.soft.domain.board.dto.response.BoardPageResponse;
+import com.sims.soft.domain.board.dto.response.BoardResponse;
 import com.sims.soft.domain.board.application.BoardCommandService;
 import com.sims.soft.domain.user.domain.User;
-import com.sims.soft.domain.board.dto.Request.BoardCommand;
+import com.sims.soft.domain.board.dto.request.BoardCommand;
 import com.sims.soft.global.dto.response.ApiResponse;
 import com.sims.soft.global.dto.response.PagingResponse;
 import io.swagger.annotations.ApiOperation;
@@ -15,7 +15,6 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Date;
 
 
 @RestController
@@ -58,7 +57,7 @@ public class boardApi {
     }
 
     @ApiOperation(value = "글삭제")
-    @DeleteMapping("/delte/{boardId}")
+    @DeleteMapping("/delete/{boardId}")
     public ApiResponse<Boolean> modify(@AuthenticationPrincipal User principal,
                                        @PathVariable(name = "boardId") Long boardId) {
         return new ApiResponse<>(boardCommandService.deleteById(principal, boardId));

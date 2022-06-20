@@ -1,5 +1,6 @@
-package com.sims.soft.domain.board.dto.Request;
+package com.sims.soft.domain.board.dto.request;
 
+import com.sims.soft.domain.board.domain.Board;
 import com.sims.soft.domain.user.domain.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,12 @@ public class BoardCommand {
 
     private String content;
     private User writer;
+    public Board toBoard(){
+        return Board.builder()
+                .title(this.title)
+                .content(this.content)
+                .build();
+    }
 
 
 
